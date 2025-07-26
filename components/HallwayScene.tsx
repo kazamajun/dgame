@@ -1,5 +1,4 @@
 // components/HallwayScene.tsx
-
 "use client";
 
 import { useState } from "react";
@@ -27,11 +26,12 @@ export default function HallwayScene() {
   return (
     <div className="hallway-scene">
       <img src="/bg_hallway.jpg" className="hallway-bg" alt="廊下背景" />
+
       <div className="character-row">
         {characters.map((char) => (
           <img
             key={char.id}
-            src={char.image}
+            src={char.expressions["normal"] || ""}
             alt={char.name}
             className={`character-icon ${talkedTo.includes(char.id) ? "dimmed" : ""}`}
             onClick={() => handleCharacterClick(char)}
