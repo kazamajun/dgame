@@ -1,0 +1,36 @@
+dgame/
+├── app/
+│   ├── page.tsx                     ← ホーム画面
+│   ├── play/
+│   │   └── page.tsx                ← 最初の脱出ステージ（教室）
+│   ├── hallway/
+│   │   └── page.tsx                ← 廊下で千日コウと会話
+│   ├── gym/
+│   │   └── page.tsx                ← 体育館で他のプレイヤーと会話＋説明
+│   └── api/ ...                    ← API用（必要時）
+│
+├── components/
+│   ├── Common/
+│   │   ├── MessageBox.tsx          ← メッセージUI共通化
+│   │   └── CharacterImage.tsx      ← 立ち絵画像コンポーネントなど
+│   ├── HallwayScene.tsx            ← 廊下シーンロジック（page.tsxから呼出）
+│   ├── GymScene.tsx                ← 体育館シーンロジック（新規）
+│   └── CharacterSelector.tsx       ← キャラ選択UI（共通で使えるように）
+│
+├── public/
+│   ├── bg_hallway.jpg
+│   ├── bg_gym.jpg
+│   ├── kou_normal.png
+│   ├── kou_smile.png
+│   ├── koharu_normal.png
+│   └── ...                         ← キャラクターや背景画像
+│
+├── styles/
+│   ├── globals.css
+│   ├── HallwayScene.module.css
+│   ├── GymScene.module.css        ← 新規
+│   └── MessageBox.module.css
+│
+├── package.json
+├── tsconfig.json
+└── next.config.js

@@ -1,0 +1,151 @@
+.container {
+  padding: 16px;
+  min-height: 100vh;
+  background-color: #111;
+  color: white;
+  position: relative;
+}
+
+/* ===== 持ち物欄 ===== */
+.inventoryBox {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #222;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  z-index: 50;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.inventoryBox ul {
+  margin: 4px 0 0;
+  padding-left: 18px;
+}
+
+/* ===== 移動ボタンエリア ===== */
+.locationButtons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 48px 0 16px;
+  flex-wrap: wrap;
+}
+
+.locationButtons button {
+  padding: 8px 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.locationButtons button:hover {
+  background-color: #555;
+}
+
+/* ===== キャラ表示グリッド ===== */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.card {
+  text-align: center;
+  transition: opacity 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.talked {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.name {
+  margin-top: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #ffcccc;
+}
+
+/* ===== 会話確認ポップアップ ===== */
+.confirmBox {
+  position: fixed;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  z-index: 100;
+}
+
+.confirmBox p {
+  margin-bottom: 12px;
+}
+
+.confirmBox button {
+  margin: 0 8px;
+  padding: 8px 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.confirmBox button:hover {
+  background-color: #555;
+}
+
+/* ===== セリフ表示 ===== */
+.dialogueBox {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  z-index: 90;
+  cursor: pointer;
+}
+
+/* ===== 「会議へ進む」ボタン ===== */
+.proceedWrapper {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 80;
+}
+
+.proceedButton {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #ff6666;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.proceedButton:hover {
+  background-color: #ff4444;
+}
